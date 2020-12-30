@@ -91,7 +91,7 @@ class TankDataBase:ObservableObject{
                 EngineDataBase = decodedData
             }
         }
-        LoadtestData()
+        //LoadtestData()
     }
     
     func loadCountries(){

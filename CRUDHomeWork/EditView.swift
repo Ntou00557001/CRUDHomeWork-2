@@ -35,7 +35,7 @@ struct TankEditView: View {
                         GeometryReader{
                             geometry in
                             Picker(selection: $NewEditData.TankMainArmament.id,label: Text("選擇武器")){
-                                ForEach(DataBase.ArmamentDataBase.indices){
+                                ForEach(DataBase.ArmamentDataBase.indices, id: \.self){
                                     (DataNumber) in
                                     Text(DataBase.ArmamentDataBase[DataNumber].Name).tag(DataBase.ArmamentDataBase[DataNumber].id)
                                 }
@@ -47,7 +47,7 @@ struct TankEditView: View {
                         GeometryReader{
                             geometry in
                             Picker(selection: $NewEditData.TankSecondaryArmament.id,label: Text("選擇武器")){
-                                ForEach(DataBase.ArmamentDataBase.indices){
+                                ForEach(DataBase.ArmamentDataBase.indices, id: \.self){
                                     (DataNumber) in
                                     Text(DataBase.ArmamentDataBase[DataNumber].Name).tag(DataBase.ArmamentDataBase[DataNumber].id)
                                 }
@@ -59,7 +59,7 @@ struct TankEditView: View {
                         GeometryReader{
                             geometry in
                             Picker(selection: $NewEditData.TankEngine.id,label: Text("選擇引擎")){
-                                ForEach(DataBase.EngineDataBase.indices){
+                                ForEach(DataBase.EngineDataBase.indices, id: \.self){
                                     (DataNumber) in
                                     Text(DataBase.EngineDataBase[DataNumber].Name).tag(DataBase.EngineDataBase[DataNumber].id)
                                 }
@@ -114,7 +114,7 @@ struct ArmamentEditView: View {
                         GeometryReader{
                             geometry in
                             Picker(selection: $NewEditData.ArmamentAmmunition.id,label: Text("選擇武器")){
-                                ForEach(DataBase.AmmunitionDataBase.indices){
+                                ForEach(DataBase.AmmunitionDataBase.indices, id: \.self){
                                     (DataNumber) in
                                     Text(DataBase.AmmunitionDataBase[DataNumber].Name).tag(DataBase.AmmunitionDataBase[DataNumber].id)
                                 }

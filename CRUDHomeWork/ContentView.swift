@@ -64,7 +64,9 @@ struct ContentView: View {
                         Spacer()
                         Text(String(format:"%.1lf%%",Double(DataBase.EngineDataBase.endIndex)/Double(DataBase.SumDataAmount())*100)).foregroundColor(.black)
                     }
-                    
+                    Button("還原初始值"){
+                        DataBase.LoadtestData()
+                    }
                 }
             }.navigationBarTitleDisplayMode(.inline).navigationBarHidden(true).navigationBarTitle("", displayMode: .inline)
         }.navigationBarTitleDisplayMode(.inline).navigationBarHidden(true)
